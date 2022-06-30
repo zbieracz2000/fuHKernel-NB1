@@ -1222,6 +1222,12 @@ endmenu
 
 menu "CPU Power Management"
 
+config CPU_VOLTAGE_TABLE
+	bool "Enable CPU Voltage Table via sysfs for adjustements"
+	default n
+	help
+	  Kryo User Votlage Control
+
 source "drivers/cpuidle/Kconfig"
 
 source "drivers/cpufreq/Kconfig"
@@ -1250,3 +1256,4 @@ source "arch/arm64/crypto/Kconfig"
 endif
 
 source "lib/Kconfig"
+
